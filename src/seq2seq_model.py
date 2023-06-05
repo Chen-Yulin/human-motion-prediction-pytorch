@@ -64,6 +64,7 @@ class Seq2SeqModel(nn.Module):
     """
     super(Seq2SeqModel, self).__init__()
 
+    # after normalize the raw data, only 54 dimensions of all 99 dimensions are preserved
     self.HUMAN_SIZE = 54
     self.input_size = self.HUMAN_SIZE + number_of_actions if one_hot else self.HUMAN_SIZE
 
